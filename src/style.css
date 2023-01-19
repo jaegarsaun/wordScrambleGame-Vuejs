@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@600&display=swap');
+
+:root{
+  --main: rgb(255, 252, 250);
+  --main-faded: rgba(255, 252, 250, 0.541);
+  --orange: #e76f51;
+  --light-orange: #f4a261;
+  --yellow: #e9c46a;
+  --teal: #2a9d8f;
+  --dark: #264653;
+  --gray: #131313;
+}
+
+body{
+  margin: 0;
+  box-sizing: border-box;
+  background: linear-gradient(25deg, rgba(231,111,81,1) 8%, rgba(230,57,70,1) 59%, rgba(231,111,81,1) 97%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -10;
+  overflow: hidden;
+}
+.content{
+  height: 100vh;
+  width: auto;
+  position: relative;
+  overflow: hidden;
+}
+.bubble{
+  height: 150vh;
+  width: 150vh;
+  background-color: var(--main);
+  border-radius: 50%;
+  position: absolute;
+  bottom: -100vh;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: .2;
+}
+.sec{
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.card{
+  width: 90%;
+  background-color: var(--main);
+  height: 50%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Signika Negative', sans-serif;
+  z-index: 10;
+}
+.card2{
+  width: 80%;
+  height: 50%;
+  background-color: var(--main);
+  border-radius: 10px;
+  position: absolute;
+  bottom: 11vh;
+  opacity: .4;
+}
+.scrambled{
+  font-size: 50px;
+  margin: 0;
+  transition: all 250ms ease-in-out;
+}
+.userGuess{
+  font-size: 25px;
+  margin: 0;
+  color: var(--orange);
+}
+.sec2{
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+input[type=text]{
+  text-align: center;
+  height: 7vh;
+  width: 90%;
+  border: 4px solid var(--dark);
+  border-radius: 10px;
+  background-color: var(--main-faded);
+  font-family: 'Signika Negative', sans-serif;
+  font-size: 40px;
+  transition: all 250ms ease;
+  margin-top: 10vh;
+}
+input:focus{
+  outline: none;
+  background-color: rgba(255, 252, 250, 0.76);
+  border: 4px solid var(--teal);
+
+}
+.buttons{
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5vh;
+}
+button{
+  width: 40%;
+  height: 7vh;
+  border: 4px solid var(--dark);
+  border-radius: 10px;
+  font-size: 35px;
+  font-family: 'Signika Negative', sans-serif;
+  background-color: var(--light-orange);
+  color: var(--dark);
+  transition: all 250ms ease;
+}
+button:hover{
+  border: 4px solid var(--teal);
+  background-color: var(--yellow);
+  color: #2a9d8f;
+}
+.score-title{
+  position: absolute;
+  font-family: 'Signika Negative', sans-serif;
+  color: #131313;
+  bottom: 1vh;
+  font-size: 30px;
+}
+span{
+  color: var(--teal);
+}
